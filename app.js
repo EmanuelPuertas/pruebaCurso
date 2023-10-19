@@ -1,22 +1,42 @@
-/*let nombre = "Ema";
-let apellido = "Puertas";
-let sueldoActual = 100000.00;
-let porcentaAumento = 20;
+// ejercici perfil : Administrador, asistente o invitado
+//switch
 
-let calcularAumento = (sueldoActual*porcentaAumento)/100;
-let nuevoSueldo = calcularAumento + sueldoActual;
+/*let perfil = "administrador";
 
-console.log("Esimado "+nombre+" "+apellido);
-console.log("su sueldo actual es de "+sueldoActual);
-console.log("el porcentaje de aumento es: "+porcentaAumento);
-console.log("Aumento es de: "+calcularAumento);
-console.log("su nuevo sueldo es :"+nuevoSueldo);
+switch (perfil){
+    case " ":
+        console.log("Debe especificar el  perfil del usuario");
+        break;
+    case "administrador":
+    case "ADMINISTRADOR":
+    case "Administrador":
+        console.log("Usted tiene todos los privilegios de uso del sistema");
+        break;    
+    case "asistente":
+    case "ASISTENTE":
+    case "Asistente":
+        console.log("Usted sólo tiene permisos de registrar, modificar y consultar datos");
+        break; 
+    case "invitado":
+    case "INVITADO":
+    case "Invitado":
+        console.log("Usted sólo tiene permisos para consultar datos");
+        break; 
+    default: 
+        console.log("Debe especificiar un perfil valido");
+}
 */
-let numero1 = 10;
-let numero2 = 20;
+//con if y else
+let perfil = "asistente";
 
-let esMayor = numero1 > numero2;
-let esMenor = numero1 < numero2;
-
-console.log("El numero1 es mayor? "+esMayor);
-console.log("El numero1 es menor? "+esMenor);
+if(perfil == " "){
+    console.log("Debe especificar el  perfil del usuario");
+}else if(perfil == "administrador" || perfil == "ADMINISTRADOR" ||perfil == "Administrador"){
+    console.log("Usted tiene todos los privilegios de uso del sistema");
+}else if(perfil == "asistente" || perfil == "Asistente" ||perfil == "Asistente"){
+    console.log("Usted sólo tiene permisos de registrar, modificar y consultar datos");
+}else if(perfil == "invitado" || perfil == "INVITADO" ||perfil == "Invitado"){
+    console.log("Usted sólo tiene permisos para consultar datos");
+}else{
+    console.log("Debe especificiar un perfil valido");
+}
